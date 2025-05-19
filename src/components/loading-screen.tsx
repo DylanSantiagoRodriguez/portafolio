@@ -1,17 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Link from "next/link"
 import TechIcons from "./TechIcons"
 
 export default function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(true)
-
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
-
+    const timer = setTimeout(() => {}, 2000)
     return () => clearTimeout(timer)
   }, [])
 

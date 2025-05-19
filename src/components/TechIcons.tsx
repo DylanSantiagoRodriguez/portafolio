@@ -35,7 +35,8 @@ const TechIcons: React.FC = () => {
     const animate = () => {
       setPositions((prev) =>
         prev.map((p) => {
-          let { x, y, dx, dy, icon, size } = p;
+          let { x, y, dx, dy } = p;
+          const { icon, size } = p;
           x += dx;
           y += dy;
           // Rebote en los bordes (asumiendo fondo 100vw x 100vh)
