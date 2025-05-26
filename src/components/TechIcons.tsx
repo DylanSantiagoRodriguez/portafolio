@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef, useState } from "react";
 import { FaJava, FaPython, FaVuejs, FaNodeJs } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
@@ -19,6 +21,7 @@ function getRandom(min: number, max: number) {
 
 const TechIcons: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   const [positions, setPositions] = useState(() =>
     Array.from({ length: ICON_COUNT }).map(() => ({
       x: getRandom(0, 80),
@@ -31,6 +34,7 @@ const TechIcons: React.FC = () => {
   );
 
   useEffect(() => {
+    setMounted(true);
     let animationId: number;
     const animate = () => {
       setPositions((prev) =>
@@ -50,6 +54,10 @@ const TechIcons: React.FC = () => {
     animate();
     return () => cancelAnimationFrame(animationId);
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div
