@@ -1,9 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import LoadingScreen from "../components/loading-screen"
-import { FaBeer } from "react-icons/fa"
-//import HomePage from "../components/home-page"
+import LoadingScreen from "@/components/loading-screen"
+import HomePage from "@/components/home_page"
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -16,6 +15,17 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
-  
-  return <main>loading ? <LoadingScreen /> : <h3> Lets go for a <FaBeer />? </h3> </main>
+  if (loading) {
+    return (
+      <main>
+        <LoadingScreen />
+      </main>
+    )
+  }
+
+  return (
+    <main>
+      <HomePage />
+    </main>
+  )
 }
