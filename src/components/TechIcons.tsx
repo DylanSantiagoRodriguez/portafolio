@@ -70,13 +70,13 @@ const TechIcons: React.FC = () => {
         return (
           <div
             key={i}
+            className="text-teal-500 dark:text-teal-400"
             style={{
               position: "absolute",
               left: `${p.x}%`,
               top: `${p.y}%`,
               width: p.size,
               height: p.size,
-              color: "#14b8a6", // text-teal-500
               opacity: 0.7,
               transition: "none",
               pointerEvents: "none",
