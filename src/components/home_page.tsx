@@ -7,6 +7,7 @@ import { SiTypescript } from "react-icons/si"
 import { IoMdMail } from "react-icons/io"
 import { useState } from "react"
 import ThemeToggle from "./ThemeToggle"
+import ParticleBackground from "./ParticleBackground"
 
 export default function HomePage() {
   const [emailCopied, setEmailCopied] = useState(false)
@@ -22,9 +23,12 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors relative">
+      {/* Fondo de partículas */}
+      <ParticleBackground particleCount={60} />
+      
       {/* Navbar */}
-      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white dark:bg-gray-900">
+      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm relative z-10">
         <nav className="flex items-center justify-between">
           <section className="flex items-center space-x-4">
             <Link href="/" className="font-medium text-gray-900 dark:text-gray-100">
@@ -48,7 +52,7 @@ export default function HomePage() {
       </header>
 
       {/* Contenido principal */}
-      <section className="container mx-auto px-4 py-8 max-w-6xl">
+      <section className="container mx-auto px-4 py-8 max-w-6xl relative z-10">
         {/* Sección de perfil principal */}
         <article className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Columna izquierda: Foto de perfil y nombre */}
@@ -74,7 +78,7 @@ export default function HomePage() {
           </section>
 
           {/* Columna derecha: Sobre mí */}
-          <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 flex flex-col justify-center">
+          <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6 flex flex-col justify-center">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Sobre mí</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
               Soy un desarrollador junior con experiencia en python, java y vue, actual estudiante de la universidad
@@ -92,12 +96,12 @@ export default function HomePage() {
         {/* Grid de secciones restantes */}
         <section className="space-y-8">
           {/* Sección de contacto - ancho completo */}
-          <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+          <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">Contactos</h2>
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Email */}
               <article 
-                className="flex items-center space-x-3 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer relative"
+                className="flex items-center space-x-3 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer relative"
                 onClick={copyEmailToClipboard}
                 title="Haz clic para copiar el email"
               >
@@ -117,7 +121,7 @@ export default function HomePage() {
               </article>
 
               {/* Teléfono */}
-              <article className="flex items-center space-x-3 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <article className="flex items-center space-x-3 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <figure className="flex-shrink-0">
                   <FaPhoneAlt className="w-6 h-6 text-teal-500 dark:text-teal-400" aria-label="Teléfono" />
                 </figure>
@@ -128,7 +132,7 @@ export default function HomePage() {
               </article>
 
               {/* LinkedIn */}
-              <article className="flex items-center space-x-3 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <article className="flex items-center space-x-3 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <figure className="flex-shrink-0">
                   <FaLinkedin className="w-6 h-6 text-teal-500 dark:text-teal-400" aria-label="LinkedIn" />
                 </figure>
@@ -146,7 +150,7 @@ export default function HomePage() {
               </article>
 
               {/* GitHub */}
-              <article className="flex items-center space-x-3 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <article className="flex items-center space-x-3 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <figure className="flex-shrink-0">
                   <FaGithub className="w-6 h-6 text-teal-500 dark:text-teal-400" aria-label="GitHub" />
                 </figure>
@@ -168,7 +172,7 @@ export default function HomePage() {
           {/* Segunda fila: CV y Conocimientos */}
           <section className="grid md:grid-cols-2 gap-8">
             {/* Sección CV */}
-            <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+            <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Descargar CV</h2>
               <button className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
                 Descargar PDF
@@ -176,7 +180,7 @@ export default function HomePage() {
             </article>
 
             {/* Sección de conocimientos */}
-            <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+            <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Mis Conocimientos</h2>
               <ul className="grid grid-cols-3 gap-6">
                 <li className="flex flex-col items-center text-center">

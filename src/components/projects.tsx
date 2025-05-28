@@ -1,12 +1,16 @@
 import Link from "next/link"
 import { FaHome, FaFileCode, FaNetworkWired } from "react-icons/fa"
 import ThemeToggle from "./ThemeToggle"
+import ParticleBackground from "./ParticleBackground"
 
 function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors relative">
+      {/* Fondo de partículas */}
+      <ParticleBackground particleCount={50} />
+      
       {/* Navbar */}
-      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white dark:bg-gray-900">
+      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm relative z-10">
         <nav className="flex items-center justify-between">
           <section className="flex items-center space-x-4">
             <Link href="/" className="font-medium text-gray-900 dark:text-gray-100">
@@ -30,7 +34,7 @@ function ProjectsPage() {
       </header>
 
       {/* Contenido principal */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 py-8 relative z-10">
         <header className="mb-8">
           <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-100">Proyectos</h1>
           <p className="text-gray-600 dark:text-gray-400">Selección de proyectos destacados y colaboraciones.</p>
@@ -45,8 +49,8 @@ function ProjectsPage() {
 
         {/* Grid de proyectos */}
         <section className="grid md:grid-cols-2 gap-6">
-          <article className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-            <figure className="mb-4 rounded-lg overflow-hidden bg-white dark:bg-gray-700 shadow-sm">
+          <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
+            <figure className="mb-4 rounded-lg overflow-hidden bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm shadow-sm">
               <iframe
                 src="https://loginar.vercel.app/"
                 className="w-full h-48 border-0"
@@ -67,7 +71,7 @@ function ProjectsPage() {
               </a>
               <a
                 href="#"
-                className="bg-white border border-gray-300 hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium py-2 px-4 rounded-md transition-colors"
+                className="bg-white/90 border border-gray-300 hover:bg-gray-50 dark:bg-gray-700/90 dark:border-gray-600 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium py-2 px-4 rounded-md transition-colors backdrop-blur-sm"
               >
                 GitHub
               </a>

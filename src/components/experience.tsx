@@ -2,12 +2,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { FaHome, FaFileCode, FaNetworkWired } from "react-icons/fa"
 import ThemeToggle from "./ThemeToggle"
+import ParticleBackground from "./ParticleBackground"
 
 export default function ExperiencePage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors relative">
+      {/* Fondo de partículas */}
+      <ParticleBackground particleCount={45} />
+      
       {/* Navbar */}
-      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white dark:bg-gray-900">
+      <header className="border-b border-gray-200 dark:border-gray-700 py-3 px-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm relative z-10">
         <nav className="flex items-center justify-between">
           <section className="flex items-center space-x-4">
             <Link href="/" className="font-medium text-gray-900 dark:text-gray-100">
@@ -31,7 +35,7 @@ export default function ExperiencePage() {
       </header>
 
       {/* Contenido principal */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 py-8 relative z-10">
         <header className="mb-8">
           <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-100">Experiencia</h1>
           <p className="text-gray-600 dark:text-gray-400">Trayectoria profesional y roles en empresas.</p>
@@ -51,10 +55,10 @@ export default function ExperiencePage() {
           rel="noopener noreferrer"
           className="block"
         >
-          <article className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden mb-8 shadow-sm hover:shadow-md hover:border hover:border-teal-500 dark:hover:border-teal-400 transition-all duration-300 cursor-pointer">
+          <article className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg overflow-hidden mb-8 shadow-sm hover:shadow-md hover:border hover:border-teal-500 dark:hover:border-teal-400 transition-all duration-300 cursor-pointer">
             <section className="p-6 flex items-start gap-4">
               <figure className="flex-shrink-0">
-                <picture className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center overflow-hidden">
+                <picture className="w-12 h-12 bg-red-100/90 dark:bg-red-900/30 backdrop-blur-sm rounded-full flex items-center justify-center overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=48&width=48"
                     alt="Logo Kamila Innovation"
