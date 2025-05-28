@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { FaHome, FaFileCode, FaNetworkWired } from "react-icons/fa"
 
 function ProjectsPage() {
@@ -42,23 +43,21 @@ function ProjectsPage() {
         {/* Grid de proyectos */}
         <section className="grid md:grid-cols-2 gap-6">
           <article className="bg-gray-50 rounded-lg p-6">
-            <figure className="flex justify-center mb-4">
-              <svg
-                className="w-8 h-8 text-teal-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-label="Icono de computadora"
-              >
-                <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+            <figure className="mb-4 rounded-lg overflow-hidden bg-white shadow-sm">
+              <iframe
+                src="https://loginar.vercel.app/"
+                className="w-full h-48 border-0"
+                title="Preview de Loginar"
+                loading="lazy"
+              />
             </figure>
             <h3 className="text-xl font-bold mb-2">Loginar</h3>
             <p className="text-gray-600 mb-4">Gestión inventario potenciado con AI desarrollado en VUE.</p>
             <section className="flex space-x-3">
               <a
-                href="#"
+                href="https://loginar.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
               >
                 Ver proyecto
