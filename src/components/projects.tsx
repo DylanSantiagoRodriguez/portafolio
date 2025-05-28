@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FaHome, FaFileCode, FaNetworkWired } from "react-icons/fa"
 
 function ProjectsPage() {
   return (
@@ -7,26 +8,19 @@ function ProjectsPage() {
       <header className="border-b border-gray-200 py-3 px-4">
         <nav className="flex items-center space-x-4">
           <Link href="/" className="font-medium">
-            Mi Portfolio
-          </Link>
-          <Link href="/experiencia" className="flex items-center space-x-1">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <span>Experiencia</span>
+            Portfolio
           </Link>
           <Link href="/home" className="flex items-center space-x-1">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-              <path d="M9 22V12h6v10" />
-            </svg>
+            <FaHome className="w-4 h-4" />
             <span>Home</span>
           </Link>
           <Link href="/proyectos" className="flex items-center space-x-1">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2v11z" />
-            </svg>
+            <FaFileCode className="w-4 h-4" />
             <span>Proyectos</span>
+          </Link>
+          <Link href="/experiencia" className="flex items-center space-x-1">
+            <FaNetworkWired className="w-4 h-4" />
+            <span>Experiencia</span>
           </Link>
         </nav>
       </header>
