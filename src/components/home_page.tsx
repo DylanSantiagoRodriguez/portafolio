@@ -33,22 +33,22 @@ export default function HomePage() {
           <section className="flex items-center space-x-4">
             <Link href="/" className="font-medium text-gray-900 dark:text-gray-100">
               Portfolio
-            </Link>
+          </Link>
             <Link href="/home" className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
               <FaHome className="w-4 h-4" />
-              <span>Home</span>
-            </Link>
+            <span>Home</span>
+          </Link>
             <Link href="/proyectos" className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
               <FaFileCode className="w-4 h-4" />
-              <span>Proyectos</span>
-            </Link>
+            <span>Proyectos</span>
+          </Link>
             <Link href="/experiencia" className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
               <FaNetworkWired className="w-4 h-4" />
-              <span>Experiencia</span>
-            </Link>
+            <span>Experiencia</span>
+          </Link>
           </section>
           <ThemeToggle />
-        </nav>
+      </nav>
       </header>
 
       {/* Contenido principal */}
@@ -61,8 +61,8 @@ export default function HomePage() {
             <figure className="flex justify-center">
               <picture className="w-64 h-64 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=256&width=256"
-                  alt="Foto de perfil"
+                  src="/imagenes/foto_perfil.jpeg"
+                  alt="Foto de perfil de Dylan Santiago Rodríguez Portilla"
                   width={256}
                   height={256}
                   className="w-full h-full object-cover"
@@ -81,15 +81,15 @@ export default function HomePage() {
           <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6 flex flex-col justify-center">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Sobre mí</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
-              Soy un desarrollador junior con experiencia en python, java y vue, actual estudiante de la universidad
-              cooperativa de colombia cursante del quinto semestre con experiencia laboral en java, springboot y vue,
+            Soy un desarrollador junior con experiencia en python, java y vue, actual estudiante de la universidad
+            cooperativa de colombia cursante del quinto semestre con experiencia laboral en java, springboot y vue,
               tengo un nivel b2 en ingles, con certificación en CI&T y diploma de eficiencia en ingles en vipri universidad de
-              nariño.
-            </p>
+            nariño.
+          </p>
             <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              Como parte de mis hobbies esta tocar guitarra, jugar ping pong, los videojuegos y el baloncesto, como
-              actividades recreativas me gusta dibujar y salir a caminar.
-            </p>
+            Como parte de mis hobbies esta tocar guitarra, jugar ping pong, los videojuegos y el baloncesto, como
+            actividades recreativas me gusta dibujar y salir a caminar.
+          </p>
           </article>
         </article>
 
@@ -171,15 +171,15 @@ export default function HomePage() {
 
           {/* Segunda fila: CV y Conocimientos */}
           <section className="grid md:grid-cols-2 gap-8">
-            {/* Sección CV */}
+        {/* Sección CV */}
             <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Descargar CV</h2>
               <button className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
-                Descargar PDF
-              </button>
+              Descargar PDF
+            </button>
             </article>
 
-            {/* Sección de conocimientos */}
+          {/* Sección de conocimientos */}
             <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Mis Conocimientos</h2>
               <ul className="grid grid-cols-3 gap-6">
@@ -208,6 +208,6 @@ export default function HomePage() {
           </section>
         </section>
       </section>
-    </main>
+      </main>
   )
 }

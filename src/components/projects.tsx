@@ -70,7 +70,7 @@ function ProjectsPage() {
                 Ver proyecto
               </a>
               <a
-                href="#"
+                href="https://github.com/T0m4s1n/loginar"
                 className="bg-white/90 border border-gray-300 hover:bg-gray-50 dark:bg-gray-700/90 dark:border-gray-600 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium py-2 px-4 rounded-md transition-colors backdrop-blur-sm"
               >
                 GitHub

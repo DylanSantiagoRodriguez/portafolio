@@ -58,13 +58,13 @@ export default function ExperiencePage() {
           <article className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg overflow-hidden mb-8 shadow-sm hover:shadow-md hover:border hover:border-teal-500 dark:hover:border-teal-400 transition-all duration-300 cursor-pointer">
             <section className="p-6 flex items-start gap-4">
               <figure className="flex-shrink-0">
-                <picture className="w-12 h-12 bg-red-100/90 dark:bg-red-900/30 backdrop-blur-sm rounded-full flex items-center justify-center overflow-hidden">
+                <picture className="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=48&width=48"
+                    src="/imagenes/kamila_innovation.png"
                     alt="Logo Kamila Innovation"
                     width={48}
                     height={48}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-left"
                   />
                 </picture>
               </figure>
