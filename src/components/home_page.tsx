@@ -172,11 +172,46 @@ export default function HomePage() {
           {/* Segunda fila: CV y Conocimientos */}
           <section className="grid md:grid-cols-2 gap-8">
         {/* Sección CV */}
-            <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6">
+            <article className="bg-gray-50/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-6 relative">
               <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Descargar CV</h2>
-              <button className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
-              Descargar PDF
-            </button>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-64">
+                {/* Lado izquierdo - Información */}
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                      Descarga mi currículum vitae actualizado con toda mi experiencia profesional, 
+                      educación y habilidades técnicas.
+                    </p>
+                    <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                      <li>• Experiencia profesional</li>
+                      <li>• Educación y certificaciones</li>
+                      <li>• Habilidades técnicas</li>
+                      <li>• Proyectos destacados</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                {/* Lado derecho - Preview del PDF */}
+                <div className="relative">
+                  <iframe
+                    src="/cv/CV DYLAN-RORIGUEZ.pdf"
+                    className="w-full h-full border-0 rounded-lg bg-white"
+                    title="Preview del CV"
+                  />
+                  <div className="absolute inset-0 bg-gray-100/20 dark:bg-gray-800/20 rounded-lg pointer-events-none"></div>
+                </div>
+              </div>
+              
+              {/* Botón de descarga en esquina inferior izquierda */}
+              <div className="absolute bottom-4 left-4">
+                <a
+                  href="/cv/CV DYLAN-RORIGUEZ.pdf"
+                  download="CV_Dylan_Rodriguez.pdf"
+                  className="bg-teal-500 hover:bg-teal-600 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-medium py-2 px-6 rounded-md transition-colors shadow-lg hover:shadow-xl"
+                >
+                  Descargar PDF
+                </a>
+              </div>
             </article>
 
           {/* Sección de conocimientos */}
